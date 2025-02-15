@@ -12,86 +12,109 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Animate.css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="https://moises-matam.github.io/image/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="https://moises-matam.github.io/image/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://moises-matam.github.io/image/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://moises-matam.github.io/image/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="https://moises-matam.github.io/image/favicon/site.webmanifest" />
+
     <!-- Estilos personalizados -->
-<style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        line-height: 1.6;
-        color: #e0e0e0; /* Texto claro para mejor legibilidad en fondo oscuro */
-        background-color: #121212; /* Fondo oscuro principal */
-    }
-    h1, h2, h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        color: #ffffff; /* Texto blanco para títulos */
-    }
-	h4 {
-		color: #ffffff; /* Texto blanco para títulos */
-	}
-    .navbar {
-        background-color: #1f1f1f !important; /* Gris muy oscuro para la barra de navegación */
-    }
-    .navbar-brand, .nav-link {
-        color: #e0e0e0 !important; /* Texto gris claro */
-    }
-    .nav-link:hover {
-        color: #00bcd4 !important; /* Cyan neón para el hover */
-    }
-    .card {
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        margin-bottom: 1.5rem;
-        transition: transform 0.3s ease;
-        background-color: #1f1f1f; /* Fondo gris muy oscuro para las tarjetas */
-    }
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 188, 212, 0.3); /* Sombra con tono cyan al hacer hover */
-    }
-    .card-header {
-        background-color: #00bcd4; /* Cyan neón para los encabezados */
-        color: #121212; /* Texto oscuro para contraste */
-        font-weight: 500;
-    }
-	.card-body {
-		color: #ffffff;
-	}
-    .list-group-item {
-        border: none;
-        padding: 0.75rem 1.25rem;
-        background-color: #1f1f1f; /* Fondo gris muy oscuro para los elementos de la lista */
-        color: #e0e0e0; /* Texto gris claro */
-    }
-    .list-group-item i {
-        margin-right: 0.5rem;
-        color: #00bcd4; /* Cyan neón para los íconos */
-    }
-    .btn-floating {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        background-color: #00bcd4; /* Cyan neón para el botón flotante */
-        color: #121212; /* Texto oscuro para contraste */
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
-        transition: background-color 0.3s ease;
-    }
-    .btn-floating:hover {
-        background-color: #0097a7; /* Cyan más oscuro al hacer hover */
-    }
-    .text-justify {
-        text-align: justify;
-    }
-    .animate__animated {
-        animation-duration: 1s;
-    }
-</style>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0; /* Texto claro para mejor legibilidad en fondo oscuro */
+            background-color: #121212; /* Fondo oscuro principal */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #ffffff; /* Texto blanco para títulos */
+        }
+
+        h4 {
+            color: #ffffff; /* Texto blanco para títulos */
+        }
+
+        .navbar {
+            background-color: #1f1f1f !important; /* Gris muy oscuro para la barra de navegación */
+        }
+
+        .navbar-brand, .nav-link {
+            color: #e0e0e0 !important; /* Texto gris claro */
+        }
+
+            .nav-link:hover {
+                color: #00bcd4 !important; /* Cyan neón para el hover */
+            }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+            background-color: #1f1f1f; /* Fondo gris muy oscuro para las tarjetas */
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 188, 212, 0.3); /* Sombra con tono cyan al hacer hover */
+            }
+
+        .card-header {
+            background-color: #00bcd4; /* Cyan neón para los encabezados */
+            color: #121212; /* Texto oscuro para contraste */
+            font-weight: 500;
+        }
+
+        .card-body {
+            color: #ffffff;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 1.25rem;
+            background-color: #1f1f1f; /* Fondo gris muy oscuro para los elementos de la lista */
+            color: #e0e0e0; /* Texto gris claro */
+        }
+
+            .list-group-item i {
+                margin-right: 0.5rem;
+                color: #00bcd4; /* Cyan neón para los íconos */
+            }
+
+        .btn-floating {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #00bcd4; /* Cyan neón para el botón flotante */
+            color: #121212; /* Texto oscuro para contraste */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-floating:hover {
+                background-color: #0097a7; /* Cyan más oscuro al hacer hover */
+            }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -155,7 +178,31 @@
             <div class="card">
                 <div class="card-header">Perfil Profesional</div>
                 <div class="card-body">
-                    <p class="text-justify">Ingeniero en Sistemas con más de 10 años de experiencia en el desarrollo de aplicaciones, servicios y microservicios utilizando <b>.NET Framework, .NET Core y SQL Server</b>. Especializado en la creación de soluciones escalables y de alto rendimiento en sectores como <b>finanzas, retail y seguridad ambiental</b>. Experto en el <b>diseño e implementación de arquitecturas de software, optimización de procesos y resolución de problemas</b> tecnológicos complejos. Enfoque basado en principios <b>SOLID, Clean Code y Clean Architecture</b> para garantizar calidad, mantenibilidad y escalabilidad en los desarrollos. Liderazgo en proyectos estratégicos, gestión de equipos y adopción de <b>metodologías ágiles (Scrum)</b> para la entrega eficiente de soluciones innovadoras. Apasionado por la mejora continua, la optimización del rendimiento y la transformación de desafíos en oportunidades de innovación.</p>
+                    <p class="text-justify">
+                        Cuento con más de 10 años de experiencia en el desarrollo de aplicaciones, servicios y microservicios dentro del ecosistema Microsoft. Me especializo en resolver desafíos complejos en sectores clave como finanzas, retail y seguridad ambiental. Mi objetivo es transformar problemas críticos en soluciones tecnológicas efectivas que generen un impacto tangible.
+                    </p>
+                    <p class="text-justify">
+                        <strong>Mi Filosofía Profesional</strong>: Creo firmemente que "Todo sistema puede ser optimizado". Cada gran desafío técnico es una oportunidad para innovar y crear soluciones que lleguen más allá de lo esperado.
+                    </p>
+                    <h5>Habilidades Destacadas</h5>
+                    <ul>
+                        <li><strong>Análisis Estratégico</strong>: Identificación y resolución de problemas tecnológicos complejos mediante un enfoque estructurado.</li>
+                        <li><strong>Diseño de Soluciones Escalables</strong>: Desarrollo de arquitecturas robustas que impulsan la eficiencia operativa.</li>
+                        <li><strong>Optimización de Procesos</strong>: Implementación de mejoras que han reducido costos, tiempos de entrega y errores.</li>
+                    </ul>
+                    <h5>Logros Clave</h5>
+                    <ul>
+                        <li><strong>Liderazgo en Proyectos Críticos</strong>: Más de 5 años liderando desarrollos estratégicos en DMX Capital, con resultados sobresalientes incluso en escenarios de alta presión.</li>
+                        <li><strong>Resolución Innovadora de Problemas</strong>: Superación de barreras técnicas con enfoques creativos y soluciones efectivas.</li>
+                    </ul>
+                    <h5>Competencias Técnicas</h5>
+                    <ul>
+                        <li><strong>Lenguajes y Tecnologías</strong>: C#, .NET Framework, .NET Core, Microsoft SQL Server, Azure DevOps, TFS, Git, Postman, Postgres, Nuget, Visual Basic, SOLID, Clean Code, Clean Architecture.</li>
+                        <li><strong>Metodologías de Trabajo</strong>: Experiencia en gestión ágil de proyectos utilizando Scrum.</li>
+                    </ul>
+                    <p class="text-justify">
+                        <strong>Pasión por la Innovación</strong>: Soy un apasionado de los retos tecnológicos que exigen innovación, estrategia y ejecución precisa. Mi motivación está en superar expectativas y transformar las limitaciones en soluciones prácticas y sostenibles.
+                    </p>
                 </div>
             </div>
         </section>
