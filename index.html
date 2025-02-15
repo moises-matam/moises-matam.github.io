@@ -332,6 +332,7 @@
                 <div class="card-header">Educación</div>
                 <div class="card-body">
                     <p><strong>Ingeniería en Sistemas Computacionales</strong><br> Universidad Tamaulipeca - Reynosa, Tamaulipas (2023 – 2025)</p>
+                    <p><strong>Ingeniería en Sistemas Computacionales</strong><br> Universidad Tamaulipeca - Reynosa, Tamaulipas (2013 – 2014)</p>
                     <p><strong>Técnico Programador en Sistemas</strong><br> Universidad Tamaulipeca - Reynosa, Tamaulipas (2011 - 2013)</p>
                 </div>
             </div>
@@ -424,7 +425,6 @@
 
     <!-- Bootstrap JS y dependencias -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script para animaciones y funcionalidades -->
     <script>
         // Script para cerrar automáticamente el menú en dispositivos móviles y desplazamiento suave
 
@@ -438,26 +438,29 @@
         // Agrega un evento de clic a cada enlace
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                // Evita el comportamiento predeterminado del enlace
-                e.preventDefault();
+                // Verifica si el enlace es interno
+                if (link.getAttribute('href').startsWith('#')) {
+                    // Evita el comportamiento predeterminado del enlace
+                    e.preventDefault();
 
-                // Obtiene el destino del enlace (el ID de la sección)
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
+                    // Obtiene el destino del enlace (el ID de la sección)
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
 
-                // Desplazamiento suave hacia la sección
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                    // Desplazamiento suave hacia la sección
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
 
-                // Cierra el menú colapsable después de un pequeño retraso
-                if (navbarCollapse.classList.contains('show')) {
-                    setTimeout(() => {
-                        navbarToggler.click(); // Simula un clic en el botón de hamburguesa
-                    }, 300); // Ajusta el retraso según sea necesario
+                    // Cierra el menú colapsable después de un pequeño retraso
+                    if (navbarCollapse.classList.contains('show')) {
+                        setTimeout(() => {
+                            navbarToggler.click(); // Simula un clic en el botón de hamburguesa
+                        }, 300); // Ajusta el retraso según sea necesario
+                    }
                 }
             });
         });
