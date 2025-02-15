@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moises Mata Martinez - CV</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: #e0e0e0; /* Texto claro para mejor legibilidad en fondo oscuro */
+        background-color: #121212; /* Fondo oscuro principal */
+    }
+    h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: #ffffff; /* Texto blanco para títulos */
+    }
+	h4 {
+		color: #ffffff; /* Texto blanco para títulos */
+	}
+    .navbar {
+        background-color: #1f1f1f !important; /* Gris muy oscuro para la barra de navegación */
+    }
+    .navbar-brand, .nav-link {
+        color: #e0e0e0 !important; /* Texto gris claro */
+    }
+    .nav-link:hover {
+        color: #00bcd4 !important; /* Cyan neón para el hover */
+    }
+    .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease;
+        background-color: #1f1f1f; /* Fondo gris muy oscuro para las tarjetas */
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 188, 212, 0.3); /* Sombra con tono cyan al hacer hover */
+    }
+    .card-header {
+        background-color: #00bcd4; /* Cyan neón para los encabezados */
+        color: #121212; /* Texto oscuro para contraste */
+        font-weight: 500;
+    }
+	.card-body {
+		color: #ffffff;
+	}
+    .list-group-item {
+        border: none;
+        padding: 0.75rem 1.25rem;
+        background-color: #1f1f1f; /* Fondo gris muy oscuro para los elementos de la lista */
+        color: #e0e0e0; /* Texto gris claro */
+    }
+    .list-group-item i {
+        margin-right: 0.5rem;
+        color: #00bcd4; /* Cyan neón para los íconos */
+    }
+    .btn-floating {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background-color: #00bcd4; /* Cyan neón para el botón flotante */
+        color: #121212; /* Texto oscuro para contraste */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+        transition: background-color 0.3s ease;
+    }
+    .btn-floating:hover {
+        background-color: #0097a7; /* Cyan más oscuro al hacer hover */
+    }
+    .text-justify {
+        text-align: justify;
+    }
+    .animate__animated {
+        animation-duration: 1s;
+    }
+</style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Moises Mata Martinez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#perfil">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#educacion">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificaciones">Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Botón flotante -->
+    <a href="#" class="btn-floating animate__animated animate__bounceIn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Contenido principal -->
+    <div class="container my-5 pt-5">
+        <!-- Encabezado -->
+        <header class="text-center mb-5 animate__animated animate__fadeIn">
+            <h1 class="display-4">MOISES MATA MARTINEZ</h1>
+            <h2 class="h4 text">SOFTWARE ENGINEER LEAD - BACK-END DEVELOPMENT SPECIALIST</h2>
+            <p class="contact-info mt-3">
+                <i class="fas fa-phone"></i> +52 814-5032-349 |
+                <i class="fas fa-envelope"></i> <a href="mailto:moises.mata.m@outlook.com" target="_blank" rel="noopener noreferrer">moises.mata.m@outlook.com</a> |
+                <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/moises-mata-m" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <i class="fas fa-map-marker-alt"></i> Monterrey, Nuevo León
+            </p>
+        </header>
+
+        <!-- Perfil Profesional -->
+        <section id="perfil" class="section animate__animated animate__fadeIn">
+            <div class="card">
+                <div class="card-header">Perfil Profesional</div>
+                <div class="card-body">
+                    <p class="text-justify">Ingeniero en Sistemas con más de 10 años de experiencia en el desarrollo de aplicaciones, servicios y microservicios utilizando <b>.NET Framework, .NET Core y SQL Server</b>. Especializado en la creación de soluciones escalables y de alto rendimiento en sectores como <b>finanzas, retail y seguridad ambiental</b>. Experto en el <b>diseño e implementación de arquitecturas de software, optimización de procesos y resolución de problemas</b> tecnológicos complejos. Enfoque basado en principios <b>SOLID, Clean Code y Clean Architecture</b> para garantizar calidad, mantenibilidad y escalabilidad en los desarrollos. Liderazgo en proyectos estratégicos, gestión de equipos y adopción de <b>metodologías ágiles (Scrum)</b> para la entrega eficiente de soluciones innovadoras. Apasionado por la mejora continua, la optimización del rendimiento y la transformación de desafíos en oportunidades de innovación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia Laboral -->
+        <section id="experiencia" class="section animate__animated animate__fadeIn">
+            <div class="card">
+                <div class="card-header">Experiencia Laboral</div>
+                <div class="card-body">
+                    <h3>SOFTWARE ENGINEER LEAD - Dimex Capital</h3>
+                    <p class="text-muted">Monterrey, Nuevo León | Abril 2019 – Julio 2024</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-code"></i> Desarrollo de código limpio, escalable y mantenible con <b>.NET (C#, .NET Core, .NET Framework)</b>, aplicando principios de <b>Clean Code y Clean Architecture</b>.</li>
+                        <li class="list-group-item"><i class="fas fa-cloud"></i> Implementación de soluciones en la nube con Azure.</li>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-cogs"></i> <b>Azure App Services</b> para el despliegue y administración de aplicaciones web.</li>
+                            <li class="list-group-item"><i class="fas fa-cogs"></i> <b>Azure Functions</b> mantenimiento a procesos serverless.</li>
+                            <li class="list-group-item"><i class="fas fa-cogs"></i> <b>Azure Blob Storage</b> para almacenamiento y gestión de archivos.</li>
+                            <li class="list-group-item"><i class="fas fa-cogs"></i> <b>Azure DevOps</b> para la gestión de CI/CD, versionado y despliegue automatizado.</li>
+                            <li class="list-group-item"><i class="fas fa-cogs"></i> <b>Azure SQL DataBase</b> para la gestión de datos en la nube.</li>
+                        </ul>
+                        <li class="list-group-item"><i class="fas fa-database"></i> Desarrollo y optimización de bases de datos <b>SQL Server</b>, incluyendo <b>Stored Procedures, Triggers e índices</b> para mejorar eficiencia.</li>
+                        <li class="list-group-item"><i class="fas fa-cogs"></i> Diseño y desarrollo de <b>API REST/Web API</b>, asegurando integración eficiente con terceros y cumplimiento de estándares de seguridad.</li>
+                        <li class="list-group-item"><i class="fas fa-microchip"></i> Liderazgo en la implementación de arquitecturas de microservicios, garantizando escalabilidad y modularidad.</li>
+                        <li class="list-group-item"><i class="fas fa-tools"></i> Experiencia avanzada en <b>.NET Core</b>, utilizando <b>multi-threading, debugging</b> y optimización de rendimiento.</li>
+                        <li class="list-group-item"><i class="fas fa-code-branch"></i> Gestión de control de versiones con <b>Git y Team Foundation Server (TFS)</b>, asegurando trazabilidad del código.</li>
+                        <li class="list-group-item"><i class="fas fa-shapes"></i> Implementación de patrones de diseño <b>(Strategy, Singleton)</b> para estructurar soluciones robustas y mantenibles.</li>
+                        <li class="list-group-item"><i class="fas fa-cube"></i> Aplicación de principios <b>SOLID</b> y Programación Orientada a Objetos <b>(POO)</b> para mejorar modularidad y mantenibilidad del código.</li>
+                        <li class="list-group-item"><i class="fas fa-project-diagram"></i> Uso de metodologías ágiles <b>(Scrum)</b> para garantizar entregas iterativas y eficiencia en el desarrollo.</li>
+                        <li class="list-group-item"><i class="fas fa-bug"></i> Resolución proactiva de incidencias técnicas, asegurando estabilidad y disponibilidad de sistemas críticos.</li>
+                        <li class="list-group-item"><i class="fas fa-file-alt"></i> Elaboración de documentación técnica y ejecución de pruebas unitarias e integrales para garantizar calidad del software.</li>
+                        <li class="list-group-item"><i class="fas fa-chart-line"></i> Enfoque en mejora continua mediante investigación y optimización de procesos tecnológicos.</li>
+                    </ul>
+
+                    <h3>IT SR Developer - Exertus</h3>
+                    <p class="text-muted">San Pedro Garza García, Nuevo León | Septiembre 2018 – Marzo 2019</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-code"></i> Desarrollo backend con <b>C# y .NET Framework</b>, contribuyendo a aplicaciones robustas y escalables.</li>
+                        <li class="list-group-item"><i class="fas fa-laptop"></i> Desarrollo frontend con <b>ASPX, Bootstrap y Angular</b>, garantizando interfaces intuitivas y responsivas.</li>
+                        <li class="list-group-item"><i class="fas fa-database"></i> Diseño y desarrollo de bases de datos en <b>SQL Server</b>, optimizando rendimiento mediante <b>Stored Procedures y Triggers</b>.</li>
+                        <li class="list-group-item"><i class="fas fa-layer-group"></i> Implementación de arquitectura en capas <b>(N-tier, MVC, MVVM)</b> para mejorar modularidad y mantenibilidad del código.</li>
+                        <li class="list-group-item"><i class="fas fa-tools"></i> Desarrollo de soluciones empresariales con <b>PowerApps</b>, integrando procesos automatizados para mejorar la eficiencia operativa.</li>
+                    </ul>
+
+                    <h3>IT SR Developer - Intelexion</h3>
+                    <p class="text-muted">Monterrey, Nuevo León | Marzo 2018 – Septiembre 2018</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-code"></i> Desarrollo backend con <b>C# y .NET Framework</b>, contribuyendo a soluciones <b>robustas y escalables</b>.</li>
+                        <li class="list-group-item"><i class="fas fa-database"></i> Diseño y desarrollo de bases de datos en <b>SQL Server</b>, optimizando rendimiento con <b>Stored Procedures y Triggers</b>.</li>
+                        <li class="list-group-item"><i class="fas fa-laptop"></i> Desarrollo frontend con <b>ASP.NET, Ajax, HTML y jQuery</b>, creando interfaces dinámicas y responsivas.</li>
+                        <li class="list-group-item"><i class="fas fa-microchip"></i> Implementación de <b>arquitecturas de microservicios</b>, asegurando modularidad y escalabilidad.</li>
+                        <li class="list-group-item"><i class="fas fa-exchange-alt"></i> Integración de sistemas con <b>RabbitMQ</b>, optimizando la comunicación en aplicaciones distribuidas.</li>
+                        <li class="list-group-item"><i class="fas fa-shapes"></i> Aplicación del <b>patrón de diseño MVC</b>, garantizando mejores prácticas en desarrollo de software.</li>
+                        <li class="list-group-item"><i class="fas fa-code-branch"></i> Gestión de versionado con <b>Git</b>, asegurando colaboración eficiente en equipos de desarrollo.</li>
+                    </ul>
+
+                    <h3>IT SR Developer - Cloudcom</h3>
+                    <p class="text-muted">Monterrey, Nuevo León | Octubre 2016 – Febrero 2018</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-code"></i> Desarrollo backend con <b>C# y .NET Framework</b>, contribuyendo a soluciones <b>robustas y escalables</b>.</li>
+                        <li class="list-group-item"><i class="fas fa-database"></i> Diseño y desarrollo de bases de datos en <b>SQL Server</b>, optimizando rendimiento con <b>Stored Procedures y Triggers</b>.</li>
+                        <li class="list-group-item"><i class="fas fa-code-branch"></i> Control de versiones con <b>Tortoise SVN</b>, asegurando integridad y colaboración en el desarrollo de software.</li>
+                        <li class="list-group-item"><i class="fas fa-desktop"></i> Desarrollo de <b>aplicaciones de escritorio con WinForms</b>, diseñando interfaces intuitivas y funcionales.</li>
+                        <li class="list-group-item"><i class="fas fa-cogs"></i> Implementación de <b>Windows Services</b> para la ejecución de tareas programadas y servicios en segundo plano.</li>
+                    </ul>
+
+                    <h3>IT SR Developer - Grupo Blanquita</h3>
+                    <p class="text-muted">Reynosa, Tamaulipas | Febrero 2015 – Septiembre 2016</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-code"></i> Desarrollo backend con <b>C# y VB en .NET Framework</b>, creando soluciones escalables y de alto rendimiento.</li>
+                        <li class="list-group-item"><i class="fas fa-laptop"></i> Desarrollo frontend con <b>ASPX, Ajax, jQuery y XML</b>, diseñando interfaces dinámicas y funcionales.</li>
+                        <li class="list-group-item"><i class="fas fa-database"></i> Diseño y optimización de bases de datos en <b>SQL Server</b>, incluyendo <b>Stored Procedures, Triggers y Vistas</b>.</li>
+                        <li class="list-group-item"><i class="fas fa-desktop"></i> Creación de <b>aplicaciones de escritorio con WinForms</b>, mejorando usabilidad y eficiencia operativa.</li>
+                        <li class="list-group-item"><i class="fas fa-cogs"></i> Implementación de <b>Windows Services</b> para la automatización de tareas en segundo plano.</li>
+                        <li class="list-group-item"><i class="fas fa-clipboard-list"></i> Levantamiento de requerimientos, asegurando alineación con las necesidades del cliente.</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle"></i> Aplicación de <b>pruebas de calidad (QA)</b> para garantizar estabilidad y correcto funcionamiento.</li>
+                        <li class="list-group-item"><i class="fas fa-tools"></i> Instalación y configuración de aplicaciones en entornos de producción.</li>
+                        <li class="list-group-item"><i class="fas fa-headset"></i> Soporte técnico en sitio y en campo, brindando asistencia efectiva y solución de problemas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades y Conocimientos -->
+        <section id="habilidades" class="section animate__animated animate__fadeIn">
+            <div class="card">
+                <div class="card-header">Habilidades y Conocimientos</div>
+                <div class="card-body">
+                    <h5>Desarrollo y Arquitectura de Software</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-laptop-code"></i> <b>Lenguajes y Frameworks</b>: C#, .NET Core, .NET Framework, Entity Framework, LINQ.</li>
+                        <li class="list-group-item"><i class="fas fa-code"></i> <b>Principios y Buenas Prácticas</b>: SOLID, Clean Code, Clean Architecture.</li>
+                        <li class="list-group-item"><i class="fas fa-globe"></i> <b>Desarrollo Web y API</b>: RESTful APIs, REST API, Swagger, MVC.</li>
+                        <li class="list-group-item"><i class="fas fa-microchip"></i> <b>Microservicios</b>: Diseño, construcción y despliegue de arquitecturas escalables y desacopladas. Comprensión de la arquitectura de microservicios, incluyendo el diseño, construcción y despliegue de microservicios.</li>
+                        <li class="list-group-item"><i class="fas fa-tachometer-alt"></i> <b>Optimización del rendimiento</b>: Capacidad para optimizar servicios para el rendimiento y comprender cómo diseñar sistemas para escalar.</li>
+                    </ul>
+
+                    <h5>Bases de Datos</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-database"></i> <b>SQL Server</b>: Diseño y optimización de bases de datos, Stored Procedures, Triggers e índices.</li>
+                    </ul>
+
+                    <h5>Cloud & DevOps</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-cloud"></i> <b>Azure</b>: Azure App Services, Azure Blob Storage, Azure SQL DataBase.</li>
+                        <li class="list-group-item"><i class="fas fa-code-branch"></i> <b>CI/CD</b>: Automatización de despliegues y pipelines.</li>
+                        <li class="list-group-item"><i class="fas fa-tools"></i> <b>DevOps</b>: Integración y entrega continua con prácticas eficientes.</li>
+                    </ul>
+
+                    <h5>Control de Versiones y Herramientas</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-code-branch"></i> <b>Gestión de código</b>: GIT, Team Foundation Server (TFS).</li>
+                        <li class="list-group-item"><i class="fas fa-tools"></i> <b>Pruebas y APIS</b>: Postman para pruebas de integración de API'S.</li>
+                    </ul>
+
+                    <h5>Metodologías y Gestión de Proyectos</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-project-diagram"></i> <b>Ágil (Scrum)</b>: Desarrollo iterativo y trabajo colaborativo en equipos de alto rendimiento.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educación -->
+        <section id="educacion" class="section animate__animated animate__fadeIn">
+            <div class="card">
+                <div class="card-header">Educación</div>
+                <div class="card-body">
+                    <p><strong>Ingeniería en Sistemas Computacionales</strong><br> Universidad Tamaulipeca - Reynosa, Tamaulipas (2023 – 2025)</p>
+                    <p><strong>Técnico Programador en Sistemas</strong><br> Universidad Tamaulipeca - Reynosa, Tamaulipas (2011 - 2013)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificaciones -->
+        <section id="certificaciones" class="section animate__animated animate__fadeIn">
+            <div class="card">
+                <div class="card-header">Certificaciones</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://pdf.credential.net/7gdwnbgl_1711035115648.pdf" target="_blank" rel="noopener noreferrer">AZ-400T00A: Designing and Implementing Microsoft DevOps solutions</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://images.credential.net/embed/lttj11gv.png" target="_blank" rel="noopener noreferrer">AZ-204T00A: Developing Solutions for Microsoft Azure</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://www.linkedin.com/learning/certificates/7ecd7dbd516eca6895c164cc46ba50a8dadedba406d33442120eaf4be1014e8b" target="_blank" rel="noopener noreferrer">Desafío de programación: Python</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://media.licdn.com/dms/document/media/v2/D4E2DAQHI-n9SNVXyMw/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1707788928539?e=1740009600&v=beta&t=UtM1sW3tpCjLUut7JFTblePYka7_xI2Ged9AkslxZr0" target="_blank" rel="noopener noreferrer">Desarrollo Seguro</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://media.licdn.com/dms/document/media/v2/D4E2DAQEvRT-nJA7P_w/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1707789218450?e=1740009600&v=beta&t=zlh9CNnYGDOaKctIHSyZVEeZJ6w7Z-STG-gpcKjEBto" target="_blank" rel="noopener noreferrer">Formando Líderes</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://media.licdn.com/dms/document/media/v2/D4E2DAQHu0h1nFXjwIw/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1707788686822?e=1740009600&v=beta&t=HTS-h8zw9ND6Kd-k2QDuUhZzylPa0uWsIDvermRb4UU" target="_blank" rel="noopener noreferrer">AZ-900: Microsoft Azure Fundamentals</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://media.licdn.com/dms/document/media/v2/D4E2DAQEQiwTNcNG4ZA/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1707789055473?e=1740009600&v=beta&t=Nd5CisuhWRvXWUT3TdoUlGwRzz4QSeWYxDWzjLLcmlo" target="_blank" rel="noopener noreferrer">Professional Scrum Master</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Idiomas -->
+        <section id="idiomas" class="section animate__animated animate__fadeIn">
+            <div class="card">
+                <div class="card-header">Idiomas</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-language"></i> <b>Español</b>: Nativo</li>
+                        <li class="list-group-item"><i class="fas fa-language"></i> <b>Inglés</b>: Competencia técnica en lectura y escritura (nivel intermedio)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Relevantes -->
+        <section id="proyectos" class="section animate__animated animate__fadeIn">
+            <div class="card">
+                <div class="card-header">Proyectos Relevantes</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-project-diagram"></i> <strong>API para Ejecución de Stored Procedures:</strong> Desarrollo de una API genérica que permite ejecutar cualquier tipo de SP con parámetros.</li>
+                        <li class="list-group-item"><i class="fas fa-project-diagram"></i> <strong>API para Ejecución de Código Compilado:</strong> Implementación de una API que permite compilar y ejecutar código dinámicamente.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script para animaciones y funcionalidades -->
+    <script>
+        // Scroll suave al hacer clic en los enlaces de la barra de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Botón flotante para volver al inicio
+        const btnFloating = document.querySelector('.btn-floating');
+        btnFloating.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mostrar/ocultar botón flotante al hacer scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                btnFloating.style.display = 'flex';
+            } else {
+                btnFloating.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
