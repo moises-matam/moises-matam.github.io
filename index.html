@@ -97,8 +97,8 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Moises Mata Martinez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -133,9 +133,9 @@
     </nav>
 
     <!-- Botón flotante -->
-    <a href="#" class="btn-floating animate__animated animate__bounceIn">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
     <!-- Contenido principal -->
     <div class="container my-5 pt-5">
@@ -406,6 +406,24 @@
             } else {
                 btnFloating.style.display = 'none';
             }
+        });
+
+        // Script para cerrar automáticamente el menú en dispositivos móviles
+        // Selecciona todos los enlaces de la barra de navegación
+        const navLinks = document.querySelectorAll('.nav-link');
+        // Selecciona el botón de hamburguesa
+        const navbarToggler = document.getElementById('navbarToggler');
+        // Selecciona el menú colapsable
+        const navbarCollapse = document.getElementById('navbarNav');
+
+        // Agrega un evento de clic a cada enlace
+        navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        // Cierra el menú colapsable si está abierto
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarToggler.click(); // Simula un clic en el botón de hamburguesa
+                        }
+                    });
         });
     </script>
 </body>
