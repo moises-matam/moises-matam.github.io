@@ -418,12 +418,29 @@
 
         // Agrega un evento de clic a cada enlace
         navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        // Cierra el menú colapsable si está abierto
-                        if (navbarCollapse.classList.contains('show')) {
-                            navbarToggler.click(); // Simula un clic en el botón de hamburguesa
-                        }
+            link.addEventListener('click', (e) => {
+                // Evita el comportamiento predeterminado del enlace
+                e.preventDefault();
+
+                // Obtiene el destino del enlace (el ID de la sección)
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                // Desplazamiento suave hacia la sección
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
+                }
+
+                // Cierra el menú colapsable después de un pequeño retraso
+                if (navbarCollapse.classList.contains('show')) {
+                    setTimeout(() => {
+                        navbarToggler.click(); // Simula un clic en el botón de hamburguesa
+                    }, 300); // Ajusta el retraso según sea necesario
+                }
+            });
         });
     </script>
 </body>
