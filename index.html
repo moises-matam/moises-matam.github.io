@@ -114,6 +114,29 @@
         .animate__animated {
             animation-duration: 1s;
         }
+
+        /* Estilo para el botón de cambio de idioma */
+        .language-switcher {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #00bcd4;
+            color: #121212;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+            .language-switcher:hover {
+                background-color: #0097a7;
+            }
     </style>
 </head>
 <body>
@@ -145,7 +168,7 @@
                         <a class="nav-link" href="#proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://moises-matam.github.io/pdf/Moises_Mata_Professional_Profile_Ats.pdf" target="_blank" rel="noopener noreferrer" download="CV_Moises_Mata.pdf">
+                        <a class="nav-link" href="https://moises-matam.github.io/pdf/cv/es-mx/Moises_Mata_Professional_Profile_Ats.pdf" target="_blank" rel="noopener noreferrer" download="CV_Moises_Mata.pdf">
                             <i class="fas fa-download"></i> Descargar CV
                         </a>
                     </li>
@@ -153,6 +176,11 @@
             </div>
         </div>
     </nav>
+
+    <!-- Botón flotante para cambiar de idioma -->
+    <div class="language-switcher" id="languageSwitcher">
+        <i class="fas fa-language"></i>
+    </div>
 
     <!-- Botón flotante -->
     <a href="#" class="btn-floating animate__animated animate__bounceIn">
@@ -344,14 +372,14 @@
                 <div class="card-header">Certificaciones</div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/az400.pdf" target="_blank" rel="noopener noreferrer">AZ-400T00A: Designing and Implementing Microsoft DevOps solutions</a></li>
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/az204.png" target="_blank" rel="noopener noreferrer">AZ-204T00A: Developing Solutions for Microsoft Azure</a></li>
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/python.png" target="_blank" rel="noopener noreferrer">Desafío de programación: Python</a></li>
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/desarrolloSeguro.pdf" target="_blank" rel="noopener noreferrer">Desarrollo Seguro</a></li>
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/formandoLideres.pdf" target="_blank" rel="noopener noreferrer">Formando Líderes</a></li>
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/az900.pdf" target="_blank" rel="noopener noreferrer">AZ-900: Microsoft Azure Fundamentals</a></li>
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/admTiempoEstres.pdf" target="_blank" rel="noopener noreferrer">Administración del Tiempo y el Estrés</a></li>
-                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/professionalScrumMaster.pdf" target="_blank" rel="noopener noreferrer">Professional Scrum Master</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/az400.pdf" target="_blank" rel="noopener noreferrer">AZ-400T00A: Designing and Implementing Microsoft DevOps solutions</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/az204.png" target="_blank" rel="noopener noreferrer">AZ-204T00A: Developing Solutions for Microsoft Azure</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/python.png" target="_blank" rel="noopener noreferrer">Desafío de programación: Python</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/desarrolloSeguro.pdf" target="_blank" rel="noopener noreferrer">Desarrollo Seguro</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/formandoLideres.pdf" target="_blank" rel="noopener noreferrer">Formando Líderes</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/az900.pdf" target="_blank" rel="noopener noreferrer">AZ-900: Microsoft Azure Fundamentals</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/admTiempoEstres.pdf" target="_blank" rel="noopener noreferrer">Administración del Tiempo y el Estrés</a></li>
+                        <li class="list-group-item"><i class="fas fa-certificate"></i> <a href="https://moises-matam.github.io/pdf/certifications/professionalScrumMaster.pdf" target="_blank" rel="noopener noreferrer">Professional Scrum Master</a></li>
                     </ul>
                 </div>
             </div>
@@ -482,6 +510,10 @@
             } else {
                 btnFloating.style.display = 'none';
             }
+        });
+
+        document.getElementById('languageSwitcher').addEventListener('click', () => {
+            window.location.href = 'file:///C:/Git/cv/moises-matam.github.io/en-us/index.html'; // Cambia la URL por la que desees
         });
     </script>
 </body>
