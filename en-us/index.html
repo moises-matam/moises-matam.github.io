@@ -134,9 +134,81 @@
             cursor: pointer;
         }
 
-            .language-switcher:hover {
-                background-color: #0097a7;
-            }
+        .language-switcher:hover {
+            background-color: #0097a7;
+        }
+
+        /* Estilo para el botón de cambio de tema */
+        .theme-switcher {
+            position: fixed;
+            bottom: 140px; /* Ajusta la posición vertical */
+            right: 20px;
+            z-index: 1000;
+            background-color: #00bcd4; /* Cyan neón para el botón flotante */
+            color: #121212; /* Texto oscuro para contraste */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .theme-switcher:hover {
+            background-color: #0097a7; /* Cyan más oscuro al hacer hover */
+        }
+
+        /* Estilos para el tema claro */
+        body.light-theme {
+            background-color: #ffffff; /* Fondo blanco */
+            color: #333; /* Texto oscuro */
+        }
+
+        body.light-theme h1,
+        body.light-theme h2,
+        body.light-theme h3,
+        body.light-theme h4 {
+            color: #2c3e50; /* Texto oscuro para títulos */
+        }
+
+        body.light-theme .navbar {
+            background-color: #f8f9fa !important; /* Fondo claro para la barra de navegación */
+        }
+
+        body.light-theme .navbar-brand,
+        body.light-theme .nav-link {
+            color: #333 !important; /* Texto oscuro para la barra de navegación */
+        }
+
+        body.light-theme .nav-link:hover {
+            color: #00bcd4 !important; /* Cyan neón para el hover */
+        }
+
+        body.light-theme .card {
+            background-color: #ffffff; /* Fondo blanco para las tarjetas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+        }
+
+        body.light-theme .card-header {
+            background-color: #00bcd4; /* Cyan neón para los encabezados */
+            color: #ffffff; /* Texto blanco para contraste */
+        }
+
+        body.light-theme .card-body {
+            color: #333; /* Texto oscuro para el cuerpo de las tarjetas */
+        }
+
+        body.light-theme .list-group-item {
+            background-color: #ffffff; /* Fondo blanco para los elementos de la lista */
+            color: #333; /* Texto oscuro */
+        }
+
+        body.light-theme .list-group-item i {
+            color: #00bcd4; /* Cyan neón para los íconos */
+        }
     </style>
 </head>
 <body>
@@ -177,13 +249,18 @@
         </div>
     </nav>
 
+    <!-- Botón flotante para cambiar de tema -->
+    <div class="theme-switcher" id="themeSwitcher" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme">
+        <i class="fas fa-moon"></i> <!-- Ícono de luna para tema oscuro -->
+    </div>
+
     <!-- Botón flotante para cambiar de idioma -->
-    <div class="language-switcher" id="languageSwitcher">
+    <div class="language-switcher" id="languageSwitcher" data-bs-toggle="tooltip" data-bs-placement="left" title="Change language">
         <i class="fas fa-language"></i>
     </div>
 
-    <!-- Botón flotante -->
-    <a href="#" class="btn-floating animate__animated animate__bounceIn">
+    <!-- Botón flotante para volver al inicio -->
+    <a href="#" class="btn-floating animate__animated animate__bounceIn" data-bs-toggle="tooltip" data-bs-placement="left" title="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -515,6 +592,54 @@
         document.getElementById('languageSwitcher').addEventListener('click', () => {
             window.location.href = 'https://moises-matam.github.io'; // Cambia la URL por la que desees
         });
+
+        // Función para cambiar el tema
+        function toggleTheme() {
+            const body = document.body;
+            const themeSwitcherIcon = document.querySelector('#themeSwitcher i');
+
+            // Alternar entre tema oscuro y claro
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeSwitcherIcon.classList.remove('fa-sun');
+                themeSwitcherIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark'); // Guardar preferencia en localStorage
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeSwitcherIcon.classList.remove('fa-moon');
+                themeSwitcherIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light'); // Guardar preferencia en localStorage
+            }
+        }
+
+        // Aplicar el tema guardado al cargar la página
+        function applySavedTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark'; // Tema predeterminado: oscuro
+            const body = document.body;
+            const themeSwitcherIcon = document.querySelector('#themeSwitcher i');
+
+            if (savedTheme === 'light') {
+                body.classList.add('light-theme');
+                themeSwitcherIcon.classList.remove('fa-moon');
+                themeSwitcherIcon.classList.add('fa-sun');
+            } else {
+                body.classList.add('dark-theme');
+                themeSwitcherIcon.classList.remove('fa-sun');
+                themeSwitcherIcon.classList.add('fa-moon');
+            }
+        }
+
+        // Evento para cambiar el tema al hacer clic en el botón
+        document.getElementById('themeSwitcher').addEventListener('click', toggleTheme);
+
+        // Aplicar el tema guardado al cargar la página
+        applySavedTheme();
+
+        // Inicializar tooltips
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
     </script>
 </body>
 </html>
