@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Quieres ser mi novia otra vez?</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <div class="header">
+            <span class="title">root@love:/propuesta</span>
+        </div>
+        <div class="terminal-body">
+            <!-- Nuevo contenedor intermedio -->
+            <div class="content" id="terminal-content"></div>
+        </div>
+    </div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg" />
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Agrega esto antes del cierre de </body> -->
+    <div class="mobile-buttons">
+        <button class="mobile-btn" onclick="handleResponse('y')">SÍ</button>
+        <button class="mobile-btn" onclick="handleResponse('n')">NO</button>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

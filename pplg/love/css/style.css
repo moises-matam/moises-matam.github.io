@@ -1,0 +1,257 @@
+ body {
+     background-color: #0f0f0f;
+     color: #00ffcc;
+     font-family: 'Courier New', Courier, monospace;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+}
+ .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: radial-gradient(#0f0 1px, transparent 1px);
+     background-size: 20px 20px;
+     opacity: 0.1;
+     z-index: 0;
+}
+.terminal {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 80vh;
+    background-color: #111;
+    box-shadow: 0 0 20px #0f0;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 2rem;
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    animation: glitch 2s infinite;
+    max-height: 600px; /* Límite máximo para desktop */
+    display: flex;
+    flex-direction: column; /* Organiza header y body */
+}
+.terminal-body {
+    flex-grow: 1; /* Ocupa todo el espacio restante */
+    overflow: hidden; /* Contiene el scroll interno */
+    display: flex;
+    flex-direction: column;
+}
+ .header {
+     border-bottom: 1px solid #0f0;
+     padding-bottom: 10px;
+     margin-bottom: 20px;
+}
+ .title {
+     color: #0f0;
+     font-weight: bold;
+}
+.content {
+    white-space: pre-wrap;
+    font-size: 1.2em;
+    height: calc(100% - 50px); /* Resta el espacio del header */
+    overflow-y: auto; /* Habilita scroll vertical */
+    padding: 0 15px 20px 0; /* Espacio para scroll */
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: #00ffcc #111; /* Color del scroll */
+    margin-top: 10px;
+    scroll-behavior: smooth; /* Scroll suave */
+}
+ @keyframes glitch {
+     0% {
+         text-shadow: 2px 0 red;
+    }
+     20% {
+         text-shadow: -2px 0 blue;
+    }
+     40% {
+         text-shadow: 2px 2px green;
+    }
+     60% {
+         text-shadow: -2px -2px magenta;
+    }
+     80% {
+         text-shadow: 1px 1px cyan;
+    }
+     100% {
+         text-shadow: 0 0 #00ffcc;
+    }
+}
+/* Estilo del scroll para Chrome/Edge/Safari */
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #00ffcc;
+    border-radius: 4px;
+}
+ .options {
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+     margin-top: 3rem;
+     flex-wrap: wrap;
+}
+ .btn {
+     background: transparent;
+     border: 2px solid #00ffcc;
+     color: #00ffcc;
+     padding: 1rem 2rem;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: 0.3s;
+     position: relative;
+}
+ .btn:hover {
+     background-color: #00ffcc;
+     color: #0f0f0f;
+}
+ .heart {
+     position: absolute;
+     width: 10px;
+     height: 10px;
+     background: #ff0077;
+     transform: rotate(45deg);
+     animation: rise 1s ease-out forwards;
+     pointer-events: none;
+}
+ .heart::before, .heart::after {
+     content: "";
+     position: absolute;
+     width: 10px;
+     height: 10px;
+     background: #ff0077;
+     border-radius: 50%;
+}
+ .heart::before {
+     top: -5px;
+     left: 0;
+}
+ .heart::after {
+     left: -5px;
+     top: 0;
+}
+ @keyframes rise {
+     0% {
+         opacity: 1;
+         transform: scale(1) translateY(0);
+    }
+     100% {
+         opacity: 0;
+         transform: scale(1.5) translateY(-100px);
+    }
+}
+@media (max-width: 600px) {
+    .terminal {
+        top: 2%;
+        left: 2%;
+        width: 96%; /* Reducimos margen */
+        height: 94vh;
+        max-height: none;
+        padding: 1rem; /* Padding más ajustado */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
+        overflow: hidden; /* Previene escapes laterales */
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .content {
+        white-space: pre-wrap;
+        word-wrap: break-word; /* Asegura que el texto no desborde */
+        overflow-wrap: break-word;
+        padding-right: 5px;
+        font-size: 0.95rem; /* Tamaño ligeramente menor */
+        line-height: 1.4; /* Mejor espaciado */
+    }
+    .btn {
+        padding: 0.8rem 1.5rem;
+    }
+        /* Ajuste específico para líneas muy largas */
+        .content br {
+            display: none; /* Optimiza saltos de línea */
+        }
+}
+/* Efecto Glitch para texto */
+ .glitch-text {
+     animation: glitch 1s infinite;
+     color: #ff0077;
+}
+/* Página final */
+ .final-message {
+     text-align: center;
+     animation: none;
+}
+ .final-message h1 {
+     font-size: 2.5rem;
+     margin-bottom: 2rem;
+}
+ .final-message ul {
+     list-style: none;
+     padding: 0;
+}
+ .final-message li {
+     margin: 1rem 0;
+     position: relative;
+     padding-left: 2rem;
+}
+ .final-message li::before {
+     content: ">";
+     position: absolute;
+     left: 0;
+     color: #00ffcc;
+}
+ .signature {
+     font-style: italic;
+     margin-top: 3rem;
+     opacity: 0.8;
+}
+/* Mobile */
+ @media (max-width: 480px) {
+     .terminal {
+         top: 5%;
+         height: 90%;
+         padding: 1rem;
+         font-size: 0.9rem;
+    }
+     .final-message h1 {
+         font-size: 1.8rem;
+    }
+}
+
+.mobile-buttons {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .mobile-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #111;
+        z-index: 10;
+    }
+
+    .mobile-btn {
+        background: transparent;
+        border: 1px solid #00ffcc;
+        color: #00ffcc;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+    }
+}
