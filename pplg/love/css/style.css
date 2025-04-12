@@ -255,3 +255,73 @@
         border-radius: 5px;
     }
 }
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-buttons {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    justify-content: center;
+    gap: 15px;
+    z-index: 100;
+    background: rgba(17, 17, 17, 0.9);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+.mobile-btn {
+    background: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    flex: 1;
+    max-width: 120px;
+}
+
+@media (max-width: 400px) {
+    .mobile-buttons {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+/* Estilo para la barra de progreso */
+.progress-container {
+    display: inline-block;
+    font-family: monospace;
+}
+
+@keyframes progressPulse {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.progress-complete {
+    color: #0f0;
+    animation: progressPulse 1s infinite;
+}
